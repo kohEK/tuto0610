@@ -14,11 +14,15 @@ class CardSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     cards = CardSerializer(many=True, source='card_set')
+    # customer
+    # product
+    # customer.{product}_set.all()
 
     class Meta:
         model = User
         fields = ['username', 'cards']
 
-    # u.card_set.all() 유저 인스턴스가 가져오는 카드가나
+    # u.card_set.all() 유저 인스턴스가 가져오는 카드가나옴]
+
 
 

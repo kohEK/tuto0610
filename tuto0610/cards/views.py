@@ -1,9 +1,5 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-from rest_framework.authtoken.models import Token
-from rest_framework.authtoken.views import ObtainAuthToken
-from rest_framework.response import Response
 from .models import Card
 from .permissions import IsOwnerOrReadOnly
 from .serializers import CardSerializer, UserSerializer
@@ -21,7 +17,7 @@ class CardViewSet(viewsets.ModelViewSet):
     queryset = Card.objects.all()
     serializer_class = CardSerializer
     pagination_class = SmallCursorPagination
-
+#IsAuthenticatedOrReadOnly
 
 class UserViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly,)
