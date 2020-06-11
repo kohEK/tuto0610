@@ -1,5 +1,6 @@
 # tutorial 0610
 
+'''
 User는 복수의 card 보유
 /api/users : List/Create
 /api/users/{pk}: Detail/Update/Delete
@@ -9,3 +10,4 @@ User는 복수의 card 보유
 *Update/Delete: Owner Only(Permission)
 *Global CursorPagination with -id ordering
 */api/login: obtain-auth-token (edited) 
+'''
